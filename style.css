@@ -1,0 +1,165 @@
+/* Base */
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+  color-scheme: light dark;
+}
+
+/* Background */
+.background {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://img.pikbest.com/backgrounds/20190908/simple-e-commerce-car-background-synthesis_1902966.jpg!sw800") center / cover no-repeat;
+  filter: brightness(0.6);
+  z-index: 0;
+}
+
+
+/* Layout */
+.login-container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Moves it to left side */
+  padding-left: 80px; /* Adds some space from left edge */
+  padding-right: 34px;
+}
+
+
+/* Card */
+.login-form {
+  width: 100%;
+  max-width: 460px;  /* Increased from 360px */
+  padding: 60px 48px; /* More inner space */
+  border-radius: 22px;
+
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  color: #fff;
+}
+
+
+
+.title {
+  margin: 0 0 20px;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* Fields */
+.field {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.field label {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #eef6ff;
+}
+
+.field input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+.field input::placeholder {
+  color: #d9f5ff; /* (fixed normal space) */
+}
+
+/* Options row */
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 4px 0 18px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.forgot {
+  color: #c1eaff;
+  text-decoration: none;
+}
+.forgot:hover,
+.register a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+.submit {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #ffefba 0%, #ffffff 100%);
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.06s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.submit:hover { transform: translateY(-1px); }
+.submit:active { transform: translateY(0); }
+
+/* Register */
+.register {
+  margin: 8px 0 0;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+}
+.register a {
+  color: #c1eaff;
+  text-decoration: none;
+}
+
+/* Focus visibility & accessibility */
+:focus-visible {
+  outline: 3px solid #c1eaff;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@supports not ((backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px))) {
+  .login-form {
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .submit {
+    transition: none;
+  }
+}

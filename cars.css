@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.navbar nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 1rem;
+}
+.navbar nav a:hover {
+  color: #fbc531;
+}
+.login-btn {
+  background: #fbc531;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: url("https://img.pikbest.com/backgrounds/20190908/simple-e-commerce-car-background-synthesis_1902966.jpg!sw800") center/cover no-repeat;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Car list */
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+.car-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+  width: 320px;
+  transition: transform 0.2s ease;
+}
+.car-card:hover {
+  transform: translateY(-5px);
+}
+.car-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.car-card h2 {
+  margin: 16px;
+}
+.car-card p {
+  margin: 0 16px 12px;
+  color: #555;
+}
+.details-btn {
+  background: #fbc531;
+  border: none;
+  width: calc(100% - 32px);
+  margin: 0 16px 16px;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Booking Form */
+.booking {
+  background: #fff;
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: 60px auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+}
+.booking h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.booking form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.booking input, .booking select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.booking button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.booking button:hover {
+  background: #fbc531;
+  color: #000;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+}
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 22px;
+}
